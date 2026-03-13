@@ -73,11 +73,16 @@ Spread of Misinformation During Public Health Crises COVID-19 : A Network Approa
 │   └── test_cases.json
 │
 ├── cache/                      # Cached embeddings
+│   ├── embeddings_cache.pkl
+│   ├── verified_embeddings.pkl
+│   ├── misinformation_embeddings.pkl
+│   └── wikidata_cache.pkl
 │
-├── network_storage/            # MinHash and LSH indexes
-│
-├── logs/                       # System logs and evaluation results
-│
+├── logs/                      # System logs and evaluation results
+│   ├── system_logs.txt
+│   ├── evaluation_results.json
+│   └── error_logs.txt
+│            
 └── requirements.txt            # Python dependencies
 ```
 
