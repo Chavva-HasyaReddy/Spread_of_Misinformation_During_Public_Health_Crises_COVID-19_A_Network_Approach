@@ -187,7 +187,7 @@ Read the full project report here:
 
 ## 🤝 Contributors
 
-- [**Hasya**](https://github.com/Chavva-HasyaReddy)
+- [**Chavva Hasya Reddy**](https://github.com/Chavva-HasyaReddy)
 - [**Rahman Nayeem Abrar**]()
 - [**Gurramkonda Sharun Prakash**](https://github.com/sharunpg)
 - [**Chaitanya Bala**]()
