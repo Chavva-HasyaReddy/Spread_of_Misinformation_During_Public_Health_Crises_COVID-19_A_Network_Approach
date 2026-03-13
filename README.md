@@ -184,7 +184,7 @@ http://localhost:8501
 
 ## 🔗 GitHub Repository
 
-Project Source Code: [Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach]([https://github.com/yourusername/covid-misinformation-detection](https://github.com/Chavva-HasyaReddy/Spread_of_Misinformation_During_Public_Health_Crises_COVID-19_A_Network_Approach))
+Project Source Code: [Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach](https://github.com/Chavva-HasyaReddy/Spread_of_Misinformation_During_Public_Health_Crises_COVID-19_A_Network_Approach))
 
 ---
 
