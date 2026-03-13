@@ -191,7 +191,7 @@ Read the full project report here:
 - [**Rahman Nayeem Abrar**]()
 - [**Gurramkonda Sharun Prakash**]()
 - [**Chaitanya Bala**]()
-- [**Jangamreddy Bhavitha Reddy**]()
+- [**Jangamreddy Bhavitha Reddy**](https://github.com/J-Bhavitha-Reddy)
 
 ---
 
