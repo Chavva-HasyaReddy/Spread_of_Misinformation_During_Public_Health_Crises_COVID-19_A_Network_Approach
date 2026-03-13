@@ -1,4 +1,4 @@
-# 📚 COVID-19 Misinformation Detection System – Network Based Approach
+# 📚 Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach
 
 COVID-19 Misinformation Detection System is an AI-powered verification framework designed to detect misleading or false health claims using **semantic similarity, network-based risk analysis, and explainable AI techniques**.
 
@@ -185,14 +185,14 @@ http://localhost:8501
 ## 🔗 GitHub Repository
 
 Project Source Code:  
-https://github.com/yourusername/covid-misinformation-detection
+https://github.com/Chavva-HasyaReddy/Spread_of_Misinformation_During_Public_Health_Crises_COVID-19_A_Network_Approach
 
 ---
 
 ## 📄 Project Report
 
 Project Title:  
-**Spread of Misinformation During Public Health Crises: A Network Approach**
+**Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach**
 
 ---
 
