@@ -388,7 +388,7 @@ Read the full project report here:
 ## 🤝 Contributors
 
 - [**Chavva Hasya Reddy**](https://github.com/Chavva-HasyaReddy)
-- [**Rahman Nayeem Abrar**]()
+- [**Rahman Nayeem Abrar**](https://github.com/Nayeemshaik712)
 - [**Gurramkonda Sharun Prakash**](https://github.com/sharunpg)
 - [**Chaitanya Bala**]()
 - [**Jangamreddy Bhavitha Reddy**](https://github.com/J-Bhavitha-Reddy)
