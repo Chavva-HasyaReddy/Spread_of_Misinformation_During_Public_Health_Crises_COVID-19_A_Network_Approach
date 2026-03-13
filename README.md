@@ -181,7 +181,7 @@ Watch the project demo video here:
 ## 📄 Project Report
 
 Read the full project report here:  
-📘 [Project Report – Google Drive](YOUR_REPORT_LINK)
+📘 [Project Report – Google Drive](https://drive.google.com/file/d/1tSb6iqELtSl__Rg7O_xa_VR1z6VrRi-s/view?usp=sharing)
 
 ---
 
