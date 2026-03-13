@@ -266,19 +266,38 @@ Spread of Misinformation During Public Health Crises COVID-19 : A Network Approa
 
 ## 💻 Tech Stack
 
-| Component | Technology |
-|-----------|------------|
-| Backend | Python |
-| Web Interface | Streamlit |
-| Semantic Embeddings | Sentence-BERT (all-MiniLM-L6-v2) |
-| Local LLM | Ollama (Gemma 2B) |
-| OCR | EasyOCR |
-| NLP | spaCy |
-| Language Detection | langdetect |
-| Translation | deep-translator |
-| Similarity Network | MinHash + LSH (datasketch) |
-| Data Storage | JSON |
+## System Components and Technologies
 
+| Component | Technology Used |
+|-----------|----------------|
+| Web Interface | Streamlit |
+| Text Embeddings | Sentence-BERT (all-MiniLM-L6-v2) |
+| Local LLM Reasoning | Ollama (Gemma2:2B) |
+| Language Detection | langdetect |
+| Translation | deep-translator (Google Translate) |
+| OCR (Image Text Extraction) | EasyOCR |
+| Entity Recognition | spaCy |
+| Near-Duplicate Detection | MinHash + LSH (datasketch) |
+| Data Storage | JSON Files |
+
+---
+
+## Algorithms
+
+| Category | Algorithm | Module Applied |
+|----------|-----------|----------------|
+| Semantic Modeling | Sentence-BERT (all-MiniLM-L6-v2) | Semantic Similarity Module |
+| Similarity Measurement | Cosine Similarity | Semantic Similarity Module |
+| Classification Logic | Threshold-Based Classification | Decision Engine |
+| Network Modeling | MinHash (Minimum Hashing) | Network Analysis Module |
+| Network Modeling | Locality Sensitive Hashing (LSH) | Network Analysis Module |
+| Risk Evaluation | Neighborhood Risk Scoring | Network Analysis Module |
+| Image Processing | EasyOCR | Input Handling / Preprocessing |
+| Language Processing | Statistical Language Detection (langdetect) | Preprocessing Module |
+| Translation | Neural Machine Translation (deep-translator) | Preprocessing Module |
+| Text Cleaning | Regex-Based Text Normalization | Preprocessing Module |
+| Entity Extraction | spaCy Named Entity Recognition (NER) | Entity Validation Module |
+| Intent Classification | Rule-Based Intent Detection | Intent Detection Module |
 ---
 
 ## 🚀 Setup Instructions
