@@ -390,7 +390,7 @@ Read the full project report here:
 - [**Chavva Hasya Reddy**](https://github.com/Chavva-HasyaReddy)
 - [**Rahman Nayeem Abrar**](https://github.com/Nayeemshaik712)
 - [**Gurramkonda Sharun Prakash**](https://github.com/sharunpg)
-- [**Chaitanya Bala**]()
+- [**Chaitanya Bala**](https://github.com/chaitanyabala35)
 - [**Jangamreddy Bhavitha Reddy**](https://github.com/J-Bhavitha-Reddy)
 
 ---
