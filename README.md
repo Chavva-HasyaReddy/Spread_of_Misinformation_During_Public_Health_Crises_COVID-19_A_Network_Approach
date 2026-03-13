@@ -1,46 +1,227 @@
 # 📚 Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach
 
-COVID-19 Misinformation Detection System is an AI-powered verification framework designed to detect misleading or false health claims using **semantic similarity, network-based risk analysis, and explainable AI techniques**.
+This project develops an AI-based misinformation detection system that verifies COVID-19 related health claims and classifies them as **CORRECT, MISINFORMATION, or UNVERIFIED**. The system accepts claims from multiple input formats such as **text, URLs, and images**, processes them through a structured verification pipeline, and compares them with a **locally curated knowledge base from trusted sources such as WHO, CDC, and NHS**.
 
-The system can analyze **text**, **URLs**, and **image-based claims**, and classify them as:
-
-- ✅ **CORRECT**
-- ❌ **MISINFORMATION**
-- ⚠️ **UNVERIFIED**
-
-The system compares user claims with verified information from trusted health organizations such as **WHO, CDC, and NHS**, enabling reliable misinformation detection during public health crises.
-
-Unlike many fact-checking tools that rely on cloud APIs, this system focuses on **offline operation, privacy preservation, and explainable decision-making** using a **locally curated knowledge base and local AI models**.
+The goal of the system is to **reduce the spread of false health information during public health crises by providing an explainable, privacy-preserving, and offline misinformation detection framework.**
 
 ---
 
-## 🔧 How It Works
+# How the System Works (Step-by-Step)
 
-### 🔹 Text Claim Verification
-- Users enter a COVID-19 related claim in the interface.
-- The system preprocesses the text (cleaning, normalization, translation if required).
-- Sentence-BERT converts the claim into a semantic embedding.
-- Cosine similarity compares the claim against verified facts and misinformation patterns.
-- The decision engine classifies the claim and provides supporting evidence.
+The system follows a **multi-stage verification pipeline**. According to the system architecture diagram in the report (Chapter 5), each module processes the claim sequentially before producing the final classification.
 
-### 🔹 URL Claim Verification
-- Users submit a webpage URL containing a claim.
-- The system extracts textual content from the webpage.
-- Extracted text is processed through the same semantic verification pipeline used for text inputs.
+---
 
-### 🔹 Image Claim Verification
-- Users upload an image containing text (such as screenshots of posts or messages).
-- **EasyOCR** extracts text from the image.
-- Extracted text is analyzed through the same misinformation detection pipeline.
+## Step 1: User Input
 
-### 🔹 Network Risk Analysis
-- Similar claims are grouped using **MinHash and Locality Sensitive Hashing (LSH)**.
-- The system identifies neighboring claims that were previously labeled as misinformation.
-- A **network risk score** adjusts the classification confidence.
+The process begins when the user submits a claim through the **Streamlit web interface**.
 
-### 🔹 Explainable AI Verification
-- The system optionally uses a **local LLM via Ollama** to generate explanations.
-- The LLM explains the classification result but **does not override rule-based decision logic**.
+The system supports three input types:
+
+### Text Input
+
+Example:  
+“Drinking hot water cures COVID-19.”
+
+### URL Input
+
+The system extracts textual content from the webpage.
+
+### Image Input
+
+Example: screenshot of a social media post.
+
+Images are processed using **EasyOCR** to extract the text from the image.
+
+---
+
+## Step 2: Input Processing
+
+All inputs are converted into **standard text format** so that they can be analyzed uniformly.
+
+Processing steps include:
+
+- Extract text from URL pages
+- Extract text from images using OCR
+- Pass text inputs directly to preprocessing
+
+This ensures that the system can handle **multi-modal information sources**.
+
+---
+
+## Step 3: Text Preprocessing
+
+The system cleans and standardizes the extracted claim before analysis.
+
+Preprocessing includes:
+
+- Language detection using **langdetect**
+- Translation of non-English text using **deep-translator**
+- Removing punctuation and special characters
+- Converting text to lowercase
+- Formatting the text
+
+These steps ensure consistent input for further analysis.
+
+---
+
+## Step 4: Knowledge Base Comparison
+
+The system maintains an **offline knowledge base** containing:
+
+- Verified facts
+- Known misinformation patterns
+
+These are collected from trusted health organizations such as **WHO, CDC, and NHS**.
+
+Each entry in the knowledge base is converted into **vector embeddings using Sentence-BERT**.
+
+The input claim is also converted into an embedding.
+
+Then the system compares them using:
+
+**Cosine Similarity**
+
+This helps detect **paraphrased or semantically similar misinformation claims**, not just exact keyword matches.
+
+---
+
+## Step 5: Intent Detection
+
+The system analyzes the **type of medical claim** using rule-based intent detection.
+
+Claims are categorized as:
+
+- General wellness
+- Symptom management
+- Prevention
+- Treatment
+- Cure
+
+For example:
+
+Claim:  
+“Garlic cures COVID-19”
+
+Intent detected → **Cure claim**
+
+The system also performs **negation detection**, identifying phrases such as:
+
+- “does not cure”
+- “cannot prevent”
+
+This prevents incorrect classification of corrective statements.
+
+---
+
+## Step 6: Entity Validation
+
+The system extracts important entities from the claim using **spaCy Named Entity Recognition (NER)**.
+
+Examples of entities:
+
+- Vaccine names
+- Drug names
+- Organizations
+- Numerical values
+
+These entities are compared with **structured data from offline Wikidata** to detect factual inconsistencies.
+
+---
+
+## Step 7: Network-Based Risk Analysis
+
+The system also analyzes misinformation patterns using a **similarity network**.
+
+Algorithms used:
+
+- **MinHash**
+- **Locality Sensitive Hashing (LSH)**
+
+These algorithms identify claims that are **similar to previously detected misinformation claims**.
+
+The system calculates a **network risk score**:
+
+```
+Risk Score =
+(Number of misinformation neighbors) / (Total similar claims)
+```
+
+If a claim is similar to many misinformation claims, the system increases the **misinformation probability**.
+
+---
+
+## Step 8: LLM Explanation
+
+The system optionally uses a **local Large Language Model through Ollama (Gemma 2B)**.
+
+The LLM generates:
+
+- Explanation of the classification
+- Evidence summary
+
+However, the LLM **does not override the rule-based decision logic**, ensuring reliability.
+
+---
+
+## Step 9: Decision Engine
+
+The **Decision Engine** combines outputs from all modules:
+
+- Semantic similarity score
+- Intent detection result
+- Entity validation result
+- Network risk score
+- LLM explanation
+
+Based on predefined thresholds, the system assigns the final label:
+
+### 1️⃣ CORRECT
+The claim matches verified health information.
+
+### 2️⃣ MISINFORMATION
+The claim contradicts verified knowledge or matches known misinformation.
+
+### 3️⃣ UNVERIFIED
+There is insufficient evidence to confirm or reject the claim.
+
+---
+
+## Step 10: Output to User
+
+The system displays the result through the web interface.
+
+The output includes:
+
+- Classification label
+- Confidence score
+- Supporting evidence
+- Network risk indicator
+- Explanation generated by the system
+
+If misinformation is detected, the system also displays a **warning message**.
+
+---
+
+# Final Workflow Summary
+
+The complete pipeline is:
+
+```
+User Input
+→ Input Processing
+→ Text Preprocessing
+→ Knowledge Base Comparison
+→ Semantic Similarity Analysis
+→ Intent Detection
+→ Entity Validation
+→ Network Risk Analysis
+→ LLM Explanation
+→ Decision Engine
+→ Final Output
+```
+
+This architecture ensures **accurate, explainable, and scalable misinformation detection.**
 
 ---
 
