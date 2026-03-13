@@ -189,7 +189,7 @@ Read the full project report here:
 
 - [**Hasya**](https://github.com/Chavva-HasyaReddy)
 - [**Rahman Nayeem Abrar**]()
-- [**Gurramkonda Sharun Prakash**]()
+- [**Gurramkonda Sharun Prakash**](https://github.com/sharunpg)
 - [**Chaitanya Bala**]()
 - [**Jangamreddy Bhavitha Reddy**](https://github.com/J-Bhavitha-Reddy)
 
