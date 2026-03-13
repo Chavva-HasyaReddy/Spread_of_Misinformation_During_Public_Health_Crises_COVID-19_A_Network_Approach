@@ -47,55 +47,38 @@ Unlike many fact-checking tools that rely on cloud APIs, this system focuses on 
 ## 🗂️ Project Structure
 
 ```
-misinformation-detection-system/
+Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach/
 │
 ├── app.py                      # Main Streamlit application
-├── classifier.py               # Semantic similarity computation pipeline
+├── classifier.py               # Semantic similarity computation
 ├── decision_engine.py          # Final classification logic
-├── preprocessing.py            # Text cleaning and normalization
+├── preprocessing.py            # Text cleaning, language detection, translation
 ├── knowledge_base.py           # Loading verified facts and misinformation patterns
 ├── intent_detector.py          # Medical claim intent detection
-├── entity_validator.py         # Entity validation using spaCy
+├── entity_validator.py         # Named entity validation using spaCy
 ├── network_analysis.py         # Claim similarity network (MinHash + LSH)
 ├── llm_verifier.py             # Local LLM explanation module
 ├── input_handler.py            # Handles text, URL, and image inputs
-│
 ├── evaluation.py               # Experimental evaluation framework
-├── fact_gatherer.py            # Fact collection from trusted sources
+├── fact_gatherer.py            # Controlled fact collection
 ├── knowledge_ingestion.py      # Knowledge base expansion
 ├── tester_feedback.py          # Tester feedback logging
 ├── config.py                   # System configuration settings
 │
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project overview
-│
-├── data/
+├── data/                       # Knowledge base datasets
 │   ├── verified_facts.json
 │   ├── known_misinformation.json
 │   ├── wikidata_entities.json
 │   ├── staged_claims.json
-│   ├── test_cases.json
-│   └── feedback_log.json
+│   └── test_cases.json
 │
-├── cache/
-│   ├── embeddings_cache.pkl
-│   ├── verified_embeddings.pkl
-│   ├── misinformation_embeddings.pkl
-│   └── wikidata_cache.pkl
+├── cache/                      # Cached embeddings
 │
-├── network_storage/
-│   ├── lsh_index.pkl
-│   ├── minhash_signatures.pkl
-│   └── claim_graph.pkl
+├── network_storage/            # MinHash and LSH indexes
 │
-├── logs/
-│   ├── system_logs.txt
-│   ├── evaluation_results.json
-│   └── error_logs.txt
+├── logs/                       # System logs and evaluation results
 │
-└── static/
-    ├── uploaded_images/
-    └── temporary_files/
+└── requirements.txt            # Python dependencies
 ```
 
 ---
@@ -121,8 +104,8 @@ misinformation-detection-system/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/covid-misinformation-detection.git
-cd covid-misinformation-detection
+git clone https://github.com/Chavva-HasyaReddy/Spread_of_Misinformation_During_Public_Health_Crises_COVID-19_A_Network_Approach.git
+cd Spread_of_Misinformation_During_Public_Health_Crises_COVID-19_A_Network_Approach
 ```
 
 ### 2. Install Python dependencies
@@ -184,7 +167,7 @@ http://localhost:8501
 
 ## 🔗 GitHub Repository
 
-Project Source Code: [Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach](https://github.com/Chavva-HasyaReddy/Spread_of_Misinformation_During_Public_Health_Crises_COVID-19_A_Network_Approach))
+Project Source Code: [Spread of Misinformation During Public Health Crises COVID-19 : A Network Approach](https://github.com/Chavva-HasyaReddy/Spread_of_Misinformation_During_Public_Health_Crises_COVID-19_A_Network_Approach)
 
 ---
 
