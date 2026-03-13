@@ -77,12 +77,7 @@ Spread of Misinformation During Public Health Crises COVID-19 : A Network Approa
 │   ├── verified_embeddings.pkl
 │   ├── misinformation_embeddings.pkl
 │   └── wikidata_cache.pkl
-│
-├── logs/                      # System logs and evaluation results
-│   ├── system_logs.txt
-│   ├── evaluation_results.json
-│   └── error_logs.txt
-│            
+│          
 └── requirements.txt            # Python dependencies
 ```
 
