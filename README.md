@@ -187,11 +187,11 @@ Read the full project report here:
 
 ## 🤝 Contributors
 
-- **Chavva Hasya Reddy**
-- **Rahman Nayeem Abrar**
-- **Gurramkonda Sharun Prakash**
-- **Chaitanya Bala**
-- **Jangamreddy Bhavitha Reddy**
+- [**Hasya**](https://github.com/Chavva-HasyaReddy)
+- [**Rahman Nayeem Abrar**]()
+- [**Gurramkonda Sharun Prakash**]()
+- [**Chaitanya Bala**]()
+- [**Jangamreddy Bhavitha Reddy**]()
 
 ---
 
